@@ -7,3 +7,14 @@
 //
 
 import Foundation
+
+struct Video: Decodable {
+
+    static var videoId = ""
+    static var title = ""
+    static var description = ""
+    static var thumbnail = ""
+    static var publishedAt = Date()
+    static var channelTitle = ""
+    
+}

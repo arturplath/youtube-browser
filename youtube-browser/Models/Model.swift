@@ -11,5 +11,8 @@ import Foundation
 class Model {
     func getVideos() {
         
+        let url = URL(string: Constants.apiUrl)
+        
+        
     }
 }
