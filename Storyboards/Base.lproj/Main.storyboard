@@ -36,11 +36,11 @@
             </objects>
             <point key="canvasLocation" x="1466.6666666666667" y="139.28571428571428"/>
         </scene>
-        <!--View Controller-->
+        <!--Search Results View Controller-->
         <scene sceneID="fY0-gI-AA1">
             <objects>
-                <viewController id="j88-vE-A7n" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="hgf-h3-HL8" customClass="SearchResultsViewController">
+                <viewController id="j88-vE-A7n" customClass="SearchResultsViewController" customModule="youtube_browser" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" tag="1" contentMode="scaleToFill" id="hgf-h3-HL8" customClass="SearchResultsViewController">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -48,7 +48,7 @@
                                 <rect key="frame" x="0.0" y="88" width="414" height="774"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleAspectFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="VideoCell" rowHeight="315" id="yIX-Nu-ivw">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleAspectFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="VideoCell" rowHeight="315" id="yIX-Nu-ivw" customClass="VideoTableViewCell" customModule="youtube_browser" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="414" height="315"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="yIX-Nu-ivw" id="pl6-kx-6HG">
@@ -87,6 +87,12 @@
                                                 <constraint firstItem="wQA-ee-b9D" firstAttribute="top" secondItem="Eql-WG-JP9" secondAttribute="bottom" id="xeM-uL-2kA"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="descriptionLabel" destination="EzT-Vl-1Eh" id="DvG-ze-v0Z"/>
+                                            <outlet property="publishDateLabel" destination="EzT-Vl-1Eh" id="ggF-4j-ToS"/>
+                                            <outlet property="thumbnailImageView" destination="Eql-WG-JP9" id="2lR-8Y-AEo"/>
+                                            <outlet property="titleLabel" destination="wQA-ee-b9D" id="38b-kn-CWG"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -99,6 +105,9 @@
                             <constraint firstItem="Tq4-4V-CdF" firstAttribute="trailing" secondItem="cm3-gc-zBv" secondAttribute="trailing" id="PMv-FJ-B8Y"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Tq4-4V-CdF"/>
+                        <connections>
+                            <outlet property="videosTableView" destination="cm3-gc-zBv" id="foW-yi-2QA"/>
+                        </connections>
                     </view>
                     <navigationItem key="navigationItem" id="IYM-Rh-5si"/>
                 </viewController>

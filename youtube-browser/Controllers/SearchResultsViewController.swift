@@ -8,27 +8,63 @@
 
 import UIKit
 
-class SearchResultsViewController: UIViewController {
+class SearchResultsViewController: UIViewController, ModelDelegate, UITableViewDelegate, UITableViewDataSource {
+
+
+    
 
     var model = Model()
     
     var videos = [Video]()
     
+    
+    
+    @IBOutlet weak var videosTableView: UITableView!
+    
+    
+    override func viewWillAppear(_ animated: Bool) {
+        model.delegate = self
+        videosTableView.delegate = self
+        videosTableView.dataSource = self
+        
+        model.getVideos()
+    }
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+        
     }
     
 
-    /*
-    // MARK: - Navigation
+    
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    
+    
+    
+    func videosFetched(_ videos: [Video]) {
+        self.videos = videos
+        videosTableView.reloadData()
     }
-    */
 
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return videos.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = videosTableView.dequeueReusableCell(withIdentifier: Constants.videosTableViewIdentifier, for: indexPath) as! VideoTableViewCell
+        
+        let video = videos[indexPath.row]
+        
+        cell.setCell(video)
+        
+        
+        return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+    }
+    
 }
