@@ -9,7 +9,7 @@
 import Foundation
 
 protocol ModelDelegate {
-    func videosFetched(_ videos:[Video])
+    func videosFetched(_  videos: [Video])
 }
 
 
@@ -43,17 +43,8 @@ class Model {
                 }
             }
             catch {
-
             }
-
-
         }
         dataTask.resume()
-        
-
-        
-        
-        
-        
     }
 }
