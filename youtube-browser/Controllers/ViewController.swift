@@ -8,36 +8,37 @@
 
 import UIKit
 
-class ViewController: UIViewController, ModelDelegate {
-    func videosFetched(_ videos: [Video]) {
-        self.videos = videos
-    }
-    
+class ViewController: UIViewController, UITextFieldDelegate  {
 
-    var model = Model()
-    var videos = [Video]()
+    @IBOutlet weak var inputTextField: UITextField!
+    
+    var input = ""
     
     
-    
-
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        model.delegate = self
-        
-        model.getVideos()
-        
-        print(videos)
+        inputTextField.delegate = self
 
     }
-
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        
+        
+        return false
+    }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-
-
-        let searchResultsVC = segue.destination as! SearchResultsViewController
-        searchResultsVC.videos = self.videos
         
-
+        let search = inputTextField.text!
+        print(search)
+        // Get a reference to the DetailViewController
+        let detailVC = segue.destination as! resultsViewController
+        // Set the video property of the DetailViewController
+        detailVC.searchFor = search
     }
-
+    
 }
+
+

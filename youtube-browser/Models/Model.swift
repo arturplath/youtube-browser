@@ -17,10 +17,14 @@ class Model {
     
     var delegate:ModelDelegate?
     
-    func getVideos() {
+    func videosFetched(_ q:String) {
         
     
-        let url = URL(string: Constants.apiUrl)
+        
+        let searchFor = q
+
+        let apiUrl = "https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=20&q=\(searchFor)&type=video&key=\(Constants.apiKey)"
+        let url = URL(string: apiUrl)
 
         let session = URLSession.shared
 
