@@ -34,9 +34,9 @@ class ViewController: UIViewController, UITextFieldDelegate  {
         let search = inputTextField.text!
         print(search)
         // Get a reference to the DetailViewController
-        let detailVC = segue.destination as! resultsViewController
+        let resultsVC = segue.destination as! resultsViewController
         // Set the video property of the DetailViewController
-        detailVC.searchFor = search
+        resultsVC.searchFor = search
     }
     
 }

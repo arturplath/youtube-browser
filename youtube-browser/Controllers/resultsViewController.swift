@@ -41,10 +41,21 @@ class resultsViewController: UIViewController, UITableViewDelegate, UITableViewD
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        print(searchFor + "<-")
-        print(videos.count)
         // Do any additional setup after loading the view.
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        guard tableView.indexPathForSelectedRow != nil else {
+            return
+        }
+        
+        let selectedVideo = videos[tableView.indexPathForSelectedRow!.row]
+        
+        let detailVC = segue.destination as! detailViewController
+        detailVC.selectedVideo = selectedVideo
+    }
+    
     
     
     
