@@ -24,6 +24,7 @@ class detailViewController: UIViewController {
     @IBOutlet weak var dateLabel: UILabel!
     
     
+    
     @IBOutlet weak var descriptionTextView: UITextView!
     
     var selectedVideo:Video?
@@ -32,7 +33,7 @@ class detailViewController: UIViewController {
         
         self.titleLabel.text = self.selectedVideo?.title
         
-        self.channelLabel.text = "Published by:" + self.selectedVideo!.channelTitle
+        self.channelLabel.text = "Published by: " + self.selectedVideo!.channelTitle
         
         
         let embedUrl = URL(string: Constants.youtubeEmbedUrl + selectedVideo!.videoId)
@@ -44,14 +45,11 @@ class detailViewController: UIViewController {
         let df = DateFormatter()
         df.dateFormat = Constants.dateFormat
         
-        self.dateLabel.text = df.string(from: self.selectedVideo!.publishedAt)
+        self.dateLabel.text = "Published on: " + df.string(from: self.selectedVideo!.publishedAt)
         
         self.descriptionTextView.text = self.selectedVideo?.description
         
-        
-        
-        
-        
+
     }
     
     
