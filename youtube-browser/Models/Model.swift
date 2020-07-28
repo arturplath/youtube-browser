@@ -19,12 +19,16 @@ class Model {
     
     func videosFetched(_ q:String) {
         
-    
         
-        let searchFor = q
+        
+        let searchFor = q.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed)
 
-        let apiUrl = "https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=20&q=\(searchFor)&type=video&key=\(Constants.apiKey)"
+        print(searchFor!)
+
+
+        let apiUrl = "https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=20&q=\(searchFor!)&type=video&key=\(Constants.apiKey)"
         let url = URL(string: apiUrl)
+        
 
         let session = URLSession.shared
 
@@ -50,5 +54,6 @@ class Model {
             }
         }
         dataTask.resume()
+        
     }
 }

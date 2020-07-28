@@ -14,25 +14,25 @@ class ViewController: UIViewController, UITextFieldDelegate  {
     
     var input = ""
     
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        self.title = "YouTube Browser"
         inputTextField.delegate = self
-
     }
+    
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         textField.resignFirstResponder()
-        
-        
+
         return false
     }
+    
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
         let search = inputTextField.text!
-        print(search)
         // Get a reference to the DetailViewController
         let resultsVC = segue.destination as! resultsViewController
         // Set the video property of the DetailViewController

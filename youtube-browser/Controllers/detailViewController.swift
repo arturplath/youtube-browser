@@ -32,7 +32,7 @@ class detailViewController: UIViewController {
         
         self.titleLabel.text = self.selectedVideo?.title
         
-        self.channelLabel.text = self.selectedVideo?.channelTitle
+        self.channelLabel.text = "Published by:" + self.selectedVideo!.channelTitle
         
         
         let embedUrl = URL(string: Constants.youtubeEmbedUrl + selectedVideo!.videoId)
