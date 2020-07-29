@@ -10,7 +10,7 @@ import Foundation
 
 struct Video: Decodable {
 
-    // Video parameters from I need .json file
+    // Video parameters I need .json file from
     var videoId:String
     var title:String
     var description:String
@@ -32,14 +32,15 @@ struct Video: Decodable {
         case channelTitle
     }
     
+            // Parsing all components to .JSON
     init(from decoder: Decoder) throws {
-        
+
         let container = try decoder.container(keyedBy: CodingKeys.self)
         
         let idContainer = try container.nestedContainer(keyedBy: CodingKeys.self, forKey: .id)
         
         self.videoId = try idContainer.decode(String.self, forKey: .videoId)
-    
+        
         
         let snippetContainer = try container.nestedContainer(keyedBy: CodingKeys.self, forKey: .snippet)
         
@@ -50,6 +51,7 @@ struct Video: Decodable {
         self.description = try snippetContainer.decode(String.self, forKey: .description)
         
         self.channelTitle = try snippetContainer.decode(String.self, forKey: .channelTitle)
+        
         
         let thumbnailsContainer = try snippetContainer.nestedContainer(keyedBy: CodingKeys.self, forKey: .thumbnails)
         

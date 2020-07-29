@@ -8,6 +8,7 @@
 
 import Foundation
 
+// Parsing response to JSON
 struct Response: Decodable {
     
     var items:[Video]?

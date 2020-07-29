@@ -12,12 +12,9 @@ class VideoTableViewCell: UITableViewCell {
 
     @IBOutlet weak var thumbnailImageView: UIImageView!
     
-
-    
     @IBOutlet weak var titleLabel: UILabel!
     
     @IBOutlet weak var dateLabel: UILabel!
-    
     
     var video:Video?
     
@@ -30,11 +27,10 @@ class VideoTableViewCell: UITableViewCell {
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
         // Configure the view for the selected state
     }
     
-    
+    // Method that sets three properties to each cell
     func setCell(_ v:Video) {
         
         self.video = v
@@ -43,12 +39,15 @@ class VideoTableViewCell: UITableViewCell {
             return
         }
         
+        // Setting title
         self.titleLabel.text = self.video?.title
         
+        // Setting date
         let df = DateFormatter()
         df.dateFormat = Constants.dateFormat
         self.dateLabel.text = df.string(from: self.video!.publishedAt)
         
+        //Downloading and setting the thumbnail
         let url = URL(string: self.video!.thumbnail)
         
         let session = URLSession.shared

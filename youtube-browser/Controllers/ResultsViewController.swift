@@ -10,16 +10,15 @@ import UIKit
 
 class ResultsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, ModelDelegate {
     
-
-
-
-    
     
     @IBOutlet weak var tableView: UITableView!
     
+    
     var videos = [Video?]()
     
+    
     var searchFor = ""
+    
     
     var model = Model()
     
@@ -46,6 +45,7 @@ class ResultsViewController: UIViewController, UITableViewDelegate, UITableViewD
             return
         }
         
+        // Setting selected video as a property given to the next view
         let selectedVideo = videos[tableView.indexPathForSelectedRow!.row]
         
         let detailVC = segue.destination as! DetailViewController
@@ -53,7 +53,7 @@ class ResultsViewController: UIViewController, UITableViewDelegate, UITableViewD
     }
     
     
-    
+    // MARK: - TableView  methods
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return videos.count
@@ -70,20 +70,13 @@ class ResultsViewController: UIViewController, UITableViewDelegate, UITableViewD
         return cell
     }
     
+    // MARK: - Model delegate method
+    
     func videosFetched(_ videos: [Video]) {
         self.videos = videos
         
         tableView.reloadData()
     }
     
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

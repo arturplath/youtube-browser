@@ -9,28 +9,20 @@
 import UIKit
 
 class ViewController: UIViewController, UITextFieldDelegate  {
-
+    
     @IBOutlet weak var inputTextField: UITextField!
     
-    
+    // Open my Linkedin in Safari
     @IBAction func linkedinClicked(_ sender: Any) {
         UIApplication.shared.open(Constants.linkedinURL!, options: [:], completionHandler: nil)
     }
     
-    
-    
+    // Open my github in Safari
     @IBAction func githubClicked(_ sender: Any) {
         UIApplication.shared.open(Constants.githubURL!, options: [:], completionHandler: nil)
     }
     
     
-    
-
-
-    
-    var input = ""
-    
-
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -38,14 +30,14 @@ class ViewController: UIViewController, UITextFieldDelegate  {
         inputTextField.delegate = self
     }
     
-    
+    // Hit return to see results
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         textField.resignFirstResponder()
-
+        
         return false
     }
     
-    
+    // Give searching keywords to the next view
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
         let search = inputTextField.text!

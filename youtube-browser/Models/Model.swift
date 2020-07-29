@@ -8,6 +8,7 @@
 
 import Foundation
 
+
 protocol ModelDelegate {
     func videosFetched(_  videos: [Video])
 }
@@ -32,16 +33,17 @@ class Model {
             if data == nil || error != nil {
                 return
             }
-
+            
             do {
                 let decoder = JSONDecoder()
                 // YouTube API documentation says date in .json is iso8601 format
                 decoder.dateDecodingStrategy = .iso8601
-
+                
                 let response = try decoder.decode(Response.self, from: data!)
-
+                
                 if response.items != nil {
                     DispatchQueue.main.async {
+                        // Give all items to delegate
                         self.delegate?.videosFetched(response.items!)
                     }
                 }
