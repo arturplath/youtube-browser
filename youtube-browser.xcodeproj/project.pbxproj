@@ -15,7 +15,6 @@
 		5A55270F24CB30DC00CC7D3A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5A55270D24CB30DC00CC7D3A /* LaunchScreen.storyboard */; };
 		5A55271B24CB45C300CC7D3A /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A55271A24CB45C300CC7D3A /* Model.swift */; };
 		5A55271D24CB45DD00CC7D3A /* Video.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A55271C24CB45DD00CC7D3A /* Video.swift */; };
-		5A55271F24CB464F00CC7D3A /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A55271E24CB464F00CC7D3A /* Constants.swift */; };
 		5A709E9124CB99CC0007521E /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A709E9024CB99CC0007521E /* Response.swift */; };
 		5A9B67CF24D1564900F780D4 /* ConstantsTemplate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A9B67CE24D1564900F780D4 /* ConstantsTemplate.swift */; };
 		5AD4CA8424CC5BEF00BA3AFA /* ResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AD4CA8324CC5BEF00BA3AFA /* ResultsViewController.swift */; };
@@ -35,7 +34,6 @@
 		5A55271024CB30DC00CC7D3A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5A55271A24CB45C300CC7D3A /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		5A55271C24CB45DD00CC7D3A /* Video.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Video.swift; sourceTree = "<group>"; };
-		5A55271E24CB464F00CC7D3A /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		5A709E9024CB99CC0007521E /* Response.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Response.swift; path = "youtube-browser/Models/Response.swift"; sourceTree = SOURCE_ROOT; };
 		5A9B67CE24D1564900F780D4 /* ConstantsTemplate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConstantsTemplate.swift; sourceTree = "<group>"; };
 		5AD4CA8324CC5BEF00BA3AFA /* ResultsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsViewController.swift; sourceTree = "<group>"; };
@@ -120,7 +118,6 @@
 		5A55271924CB429400CC7D3A /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
-				5A55271E24CB464F00CC7D3A /* Constants.swift */,
 				5A9B67CE24D1564900F780D4 /* ConstantsTemplate.swift */,
 			);
 			path = Helpers;
@@ -221,7 +218,6 @@
 				5A55271B24CB45C300CC7D3A /* Model.swift in Sources */,
 				5AD4CA8624CC8FCD00BA3AFA /* VideoTableViewCell.swift in Sources */,
 				5A55271D24CB45DD00CC7D3A /* Video.swift in Sources */,
-				5A55271F24CB464F00CC7D3A /* Constants.swift in Sources */,
 				5A709E9124CB99CC0007521E /* Response.swift in Sources */,
 				5A9B67CF24D1564900F780D4 /* ConstantsTemplate.swift in Sources */,
 				5AD4CA8424CC5BEF00BA3AFA /* ResultsViewController.swift in Sources */,
