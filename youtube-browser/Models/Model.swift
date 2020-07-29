@@ -19,19 +19,15 @@ class Model {
     
     func videosFetched(_ q:String) {
         
-        
-        
+        // Encode string for URL purpose (UTF-8)
         let searchFor = q.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed)
-
-        print(searchFor!)
-
-
+        
+        // YouTube API URL
         let apiUrl = "https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=20&q=\(searchFor!)&type=video&key=\(Constants.apiKey)"
         let url = URL(string: apiUrl)
         
-
+        // Session downloading, decoding and parsing data from the API
         let session = URLSession.shared
-
         let dataTask = session.dataTask(with: url!) { (data, response, error) in
             if data == nil || error != nil {
                 return
@@ -51,9 +47,9 @@ class Model {
                 }
             }
             catch {
+                
             }
         }
         dataTask.resume()
-        
     }
 }
