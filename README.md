@@ -10,7 +10,7 @@ App is designed to be simple Youtube Browser. User can find any public video, wa
 
 ## Screenshots
 
-![Main screen](https://raw.github.com/ryanmaxwell/iArrived/master/Screenshots/iVBORw0KGgoAAAANSUhEUgAABS0AAAo4CAYAAAC8JoK+AAABgmlDQ1BzUkdCIElFQzYxOTY2LTIu MQAAKJF1kbtLA0EQhz8TJb5-3.png)
+![Main screen](https://raw.github.com/ryanmaxwell/iArrived/master/Screenshots/iVBORw0KGgoAAAANSUhEUgAABS0AAAo4CAYAAAC8JoK+AAABgmlDQ1BzUkdCIElFQzYxOTY2LTIuMQAAKJF1kbtLA0EQhz8TJb5-3.png)
 
 ![](Screenshots/iVBORw0KGgoAAAANSUhEUgAABS0AAAo4CAYAAAC8JoK+AAABgmlDQ1BzUkdCIElFQzYxOTY2LTIu MQAAKJF1kbtLA0EQhz8TJb5-4.png "Results of search")
 
