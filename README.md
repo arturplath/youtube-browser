@@ -10,8 +10,8 @@ App is designed to be simple Youtube Browser. User can find any public video, wa
 
 ## Screenshots
 
-![](Screenshots/1.png "Main screen")
+<img src="Screenshots/1.png" title="Main screen" width=400>
 
-![](Screenshots/2.png "Results of search")
+<img src="Screenshots/2.png" title="Search results" width=400>
 
-![](Screenshots/3.png "Video and details screen")
+<img src="Screenshots/3.png" title="Video and details" width=400>
