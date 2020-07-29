@@ -10,3 +10,8 @@ App is designed to be simple Youtube Browser. User can find any public video, wa
 
 ## Screenshots
 
+![](Screenhots/iVBORw0KGgoAAAANSUhEUgAABS0AAAo4CAYAAAC8JoK+AAABgmlDQ1BzUkdCIElFQzYxOTY2LTIu MQAAKJF1kbtLA0EQhz8TJb5-3.png "Main screen")
+
+![](Screenshots/iVBORw0KGgoAAAANSUhEUgAABS0AAAo4CAYAAAC8JoK+AAABgmlDQ1BzUkdCIElFQzYxOTY2LTIu MQAAKJF1kbtLA0EQhz8TJb5-4.png "Results of search")
+
+![](Screenshots/iVBORw0KGgoAAAANSUhEUgAABS0AAAo4CAYAAAC8JoK+AAABgmlDQ1BzUkdCIElFQzYxOTY2LTIu MQAAKJF1kbtLA0EQhz8TJb5-5.png "Video and details screen")
