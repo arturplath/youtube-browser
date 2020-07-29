@@ -13,14 +13,14 @@ import Foundation
 Add your own keys below, uncomment the code and change ConstantsTemplate class name to Constants
 */
 
-class Constants {
-
-
-    static let apiKey = "[YOUR_API_KEY]"
-
-    static var searchParameter = ""
-    static let dateFormat = "EEEE, MMM d, yyyy"
-    static var youtubeEmbedUrl = "https://www.youtube.com/embed/"
-    static let linkedinURL = URL(string: "https://pl.linkedin.com/in/arturplath")
-    static let githubURL = URL(string: "https://github.com/arturplath")
-}
+//class Constants {
+//
+//
+//    static let apiKey = "[YOUR_API_KEY]"
+//
+//    static var searchParameter = ""
+//    static let dateFormat = "EEEE, MMM d, yyyy"
+//    static var youtubeEmbedUrl = "https://www.youtube.com/embed/"
+//    static let linkedinURL = URL(string: "https://pl.linkedin.com/in/arturplath")
+//    static let githubURL = URL(string: "https://github.com/arturplath")
+//}

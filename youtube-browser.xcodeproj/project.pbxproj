@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5A3F71CD24D18AFD00BE620A /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A3F71CC24D18AFD00BE620A /* Constants.swift */; };
 		5A55270324CB30D900CC7D3A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A55270224CB30D900CC7D3A /* AppDelegate.swift */; };
 		5A55270524CB30D900CC7D3A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A55270424CB30D900CC7D3A /* SceneDelegate.swift */; };
 		5A55270724CB30D900CC7D3A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A55270624CB30D900CC7D3A /* ViewController.swift */; };
@@ -24,6 +25,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5A3F71CC24D18AFD00BE620A /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		5A5526FF24CB30D900CC7D3A /* youtube-browser.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "youtube-browser.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5A55270224CB30D900CC7D3A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5A55270424CB30D900CC7D3A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -119,6 +121,7 @@
 			isa = PBXGroup;
 			children = (
 				5A9B67CE24D1564900F780D4 /* ConstantsTemplate.swift */,
+				5A3F71CC24D18AFD00BE620A /* Constants.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -212,6 +215,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5A55270724CB30D900CC7D3A /* ViewController.swift in Sources */,
+				5A3F71CD24D18AFD00BE620A /* Constants.swift in Sources */,
 				5A55270324CB30D900CC7D3A /* AppDelegate.swift in Sources */,
 				5A55270524CB30D900CC7D3A /* SceneDelegate.swift in Sources */,
 				5AD4CA8824CE523B00BA3AFA /* DetailViewController.swift in Sources */,

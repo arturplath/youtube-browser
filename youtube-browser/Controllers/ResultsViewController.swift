@@ -31,10 +31,6 @@ class ResultsViewController: UIViewController, UITableViewDelegate, UITableViewD
         model.delegate = self
         model.videosFetched(searchFor)
 
-        
-
-        
-                
     }
     
     

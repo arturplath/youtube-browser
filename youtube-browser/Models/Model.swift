@@ -21,9 +21,9 @@ class Model {
         
         // Encode string for URL purpose (UTF-8)
         let searchFor = q.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed)
-        
         // YouTube API URL
         let apiUrl = "https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=20&q=\(searchFor!)&type=video&key=\(Constants.apiKey)"
+        print(apiUrl)
         let url = URL(string: apiUrl)
         
         // Session downloading, decoding and parsing data from the API
