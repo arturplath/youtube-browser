@@ -12,6 +12,22 @@ class ViewController: UIViewController, UITextFieldDelegate  {
 
     @IBOutlet weak var inputTextField: UITextField!
     
+    
+    @IBAction func linkedinClicked(_ sender: Any) {
+        UIApplication.shared.open(Constants.linkedinURL!, options: [:], completionHandler: nil)
+    }
+    
+    
+    
+    @IBAction func githubClicked(_ sender: Any) {
+        UIApplication.shared.open(Constants.githubURL!, options: [:], completionHandler: nil)
+    }
+    
+    
+    
+
+
+    
     var input = ""
     
 
@@ -34,7 +50,7 @@ class ViewController: UIViewController, UITextFieldDelegate  {
         
         let search = inputTextField.text!
         // Get a reference to the DetailViewController
-        let resultsVC = segue.destination as! resultsViewController
+        let resultsVC = segue.destination as! ResultsViewController
         // Set the video property of the DetailViewController
         resultsVC.searchFor = search
     }

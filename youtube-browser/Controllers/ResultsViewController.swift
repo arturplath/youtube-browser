@@ -8,7 +8,7 @@
 
 import UIKit
 
-class resultsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, ModelDelegate {
+class ResultsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, ModelDelegate {
     
 
 
@@ -40,7 +40,7 @@ class resultsViewController: UIViewController, UITableViewDelegate, UITableViewD
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        self.title = "Search list"
         // Do any additional setup after loading the view.
     }
     
@@ -52,7 +52,7 @@ class resultsViewController: UIViewController, UITableViewDelegate, UITableViewD
         
         let selectedVideo = videos[tableView.indexPathForSelectedRow!.row]
         
-        let detailVC = segue.destination as! detailViewController
+        let detailVC = segue.destination as! DetailViewController
         detailVC.selectedVideo = selectedVideo
     }
     
@@ -65,7 +65,7 @@ class resultsViewController: UIViewController, UITableViewDelegate, UITableViewD
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: "VideoCell", for: indexPath) as! videoTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "VideoCell", for: indexPath) as! VideoTableViewCell
         
         let video = self.videos[indexPath.row]
         

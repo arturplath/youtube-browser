@@ -8,7 +8,7 @@
 
 import UIKit
 
-class videoTableViewCell: UITableViewCell {
+class VideoTableViewCell: UITableViewCell {
 
     @IBOutlet weak var thumbnailImageView: UIImageView!
     

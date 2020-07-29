@@ -9,7 +9,7 @@
 import UIKit
 import WebKit
 
-class detailViewController: UIViewController {
+class DetailViewController: UIViewController {
 
     
     @IBOutlet weak var titleLabel: UILabel!
@@ -55,6 +55,9 @@ class detailViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.title = "Video"
+        
+        
 
         // Do any additional setup after loading the view.
     }
