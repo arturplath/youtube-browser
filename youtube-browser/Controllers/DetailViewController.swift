@@ -27,6 +27,7 @@ class DetailViewController: UIViewController {
     
     @IBOutlet weak var descriptionTextView: UITextView!
     
+    
     var selectedVideo:Video?
     
     override func viewWillAppear(_ animated: Bool) {
